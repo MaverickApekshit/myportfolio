@@ -1,6 +1,6 @@
 from django.db import models
 
-class Projects(models.Model):
+class Project(models.Model):
 	"""Model for rendering project overviews"""
 	
 	image = models.ImageField(upload_to='images/')
