@@ -83,6 +83,42 @@
 </section>
 <!-- Intro Section End -->
 
+<!-- Projects Section Start -->
+<section class="portfolio-section section">
+
+	<!-- Projects section heading -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="heading">
+					<h3><b>Portfolio</b></h3>
+					<h6 class="font-lite-black"><b>MY WORK</b></h6>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Projects -->
+	<div class="portfolioContainer" style="position: relative; height: 1381.94px;">
+
+		<!-- Projects -->
+		{% for project in projects.all %}
+		<div class="p-item web-design" style="position: absolute; left: 0px; top: 0px;">
+			<a href="https://colorlib.com/preview/theme/cvportfolio/images/portfolio-1-600x400.jpg" data-fluidbox="" class="fluidbox__instance-1 fluidbox--initialized fluidbox--closed fluidbox--ready">
+				<div class="fluidbox__wrap" style="z-index: 990;">
+					<img src="{{ project.image.url }}" alt="" class="fluidbox__thumb" style="opacity: 1;" />
+					<div class="fluidbox__ghost" style="width: 494.618px; height: 329.74px; top: 0px; left: 0px;" title=""></div>
+				</div>
+			</a>
+
+			<p class="margin-b-50">{{ project.summary }}</p>
+		</div>
+		{% endfor %}
+
+	</div>
+</section>
+<!-- Project Section End -->
+
 <!-- About Section Start -->
 <section class="about-section section">
 	<div class="container">
@@ -104,6 +140,38 @@
 	</div>
 </section>
 <!-- About Section End -->
+
+<!-- Jobs Section Start -->
+<section class="experience-section section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Jobs Section Header -->
+			<div class="col-sm-4">
+				<div class="heading">
+					<h3><b>Work Experience</b></h3>
+					<h6 class="font-lite-black"><b>PREVIOUS JOBS</b></h6>
+				</div>
+			</div>
+
+			<!-- Jobs main content -->
+			<div class="col-sm-8">
+				<div class="experience margin-b-50">
+					<h4><b>JUNIOR PROJECT MANAGER</b></h4>
+					<h5 class="font-yellow"><b>DESIGN STUDIO</b></h5>
+					<h6 class="margin-t-10">MARCH 2015 - PRESENT</h6>
+					<p class="font-semi-white margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+					<ul class="list margin-b-30">
+						<li>Duis non volutpat arcu, eu mollis tellus.</li>
+						<li>Quis consequat nulla effi citur at.</li>
+						<li>Sed finibus aliquam neque sit.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Jobs Section End -->
 
 <!-- Education Section Start -->
 <section class="education-section section">
