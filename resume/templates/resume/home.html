@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" class="gr__colorlib_com">
+{% load staticfiles %}
 
 <head>
 	<title>Apekshit Portfolio</title>
+	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
 
-	<link href="https://colorlib.com/preview/theme/cvportfolio/common-css/bootstrap.css" rel="stylesheet">
-	<link href="https://colorlib.com/preview/theme/cvportfolio/common-css/ionicons.css" rel="stylesheet">
-	<link href="https://colorlib.com/preview/theme/cvportfolio/common-css/fluidbox.min.css" rel="stylesheet">
-	<link href="https://colorlib.com/preview/theme/cvportfolio/01-cv-portfolio/css/styles.css" rel="stylesheet">
-	<link href="https://colorlib.com/preview/theme/cvportfolio/01-cv-portfolio/css/responsive.css" rel="stylesheet">
+	<!-- CSS Libraries -->
+	<link href="{% static 'css/libs/bootstrap.css' %}" rel="stylesheet">
+	<link href="{% static 'css/libs/ionicons.css' %}" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 </head>
 
 <body data-gr-c-s-loaded="true">
@@ -60,7 +65,7 @@
 			<div class="col-md-10 col-lg-8">
 				<div class="intro">
 					
-					<div class="profile-img"><img src="https://colorlib.com/preview/theme/cvportfolio/images/profile-1-250x250.jpg" alt="" title="" style=""></div>
+					<div class="profile-img"><img src="{% static 'apekshit.jpg' %}" alt="" title="" style=""></div>
 					<h2><b>Apekshit Yadav</b></h2>
 					<h4 class="font-yellow">Software Developer</h4>
 					
@@ -152,14 +157,14 @@
 	<p class="copyright">Copyright ©{% now "Y" %} All rights reserved | Apekshit Yadav</p>
 </footer>
 
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/jquery-3.2.1.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/tether.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/bootstrap.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/isotope.pkgd.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/jquery.waypoints.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/progressbar.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/jquery.fluidbox.min.js" type="text/javascript"></script>
-<script src="https://colorlib.com/preview/theme/cvportfolio/common-js/scripts.js" type="text/javascript"></script>
+<!-- JavaScript Libraries -->
+<script src="{% static 'js/libs/jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/libs/tether.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/libs/bootstrap.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/libs/jquery.waypoints.min.js' %}" type="text/javascript"></script>
+
+<!-- Custom script -->
+<script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
 
 </body>
 </html>
