@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_i(d08f9b(ks3ym2zag!i(-sqhx-e*j^euuc2j+()-of+1&rk&'
+SECRET_KEY = os.environ.get('PORTFOLIO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['apekshitportfolio.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': 'y0uc4ntb34tm3',
+        'USER': os.environ.get('PORTFOLIO_DB_USER'),
+        'PASSWORD': os.environ.get('PORTFOLIO_DB_PASS'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
