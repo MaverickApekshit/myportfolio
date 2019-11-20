@@ -99,6 +99,13 @@ b.max-bold{ font-weight: 700; }
 
 .font-lite-black{ color: #999; }
 
+.alt-bg-section{ background: #28023D; color: #fff; }
+
+.list > li{ display: block; position: relative; margin-bottom: 10px; padding-left: 20px; }
+
+.list > li:before{ content: ''; position: absolute; top: 50%; left: 0; height: 10px; 
+	width: 10px; margin-top: -5px; display: block; border-radius: 10px; border: 2px solid #FFA600; }
+
 
 /* ---------------------------------
 3. HEADER
@@ -191,7 +198,14 @@ header .info .right-area{ margin-left: 45px; }
 .radial-progress .progress-title{ position: absolute; top: 50%; left: 50%; width: 100%;
 	letter-spacing: 0; text-align: center; transform: translate(-50%, 15px); color: #777; }
 
-	
+.about-section h4 {font-size: 1.5em; margin-bottom: 12px;}
+
+.about-section .skill-icons {margin-bottom: 12px;}
+
+.skill-icons i{color: #777; margin: 0 5px;}
+
+.skill-icons i:hover{color: #FFA804;}
+
 
 /* ---------------------------------
 7. EXPERIENCE SECTION

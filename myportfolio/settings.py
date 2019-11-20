@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import django_heroku
+from . import localhost_vars
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'myportfolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER': os.environ.get('PORTFOLIO_DB_USER'),
-        'PASSWORD': os.environ.get('PORTFOLIO_DB_PASS'),
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': localhost_vars.DB_NAME,
+        'USER': localhost_vars.DB_USERNAME,
+        'PASSWORD': localhost_vars.DB_PASSWORD,
+        'HOST': localhost_vars.DB_HOST,
+        'PORT': localhost_vars.DB_PORT,
     }
 }
 
