@@ -213,6 +213,8 @@ header .info .right-area{ margin-left: 45px; }
 
 .experience-section{ background: #28023D; color: #fff; }
 
+.experience h4, .experience h5, .experience h6{ text-transform: uppercase; }
+
 .experience .list > li{ display: block; position: relative; margin-bottom: 10px; padding-left: 20px; }
 
 .experience .list > li:before{ content: ''; position: absolute; top: 50%; left: 0; height: 10px; 
