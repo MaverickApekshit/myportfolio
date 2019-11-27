@@ -196,7 +196,11 @@
 						{% endif %}
 					</h6>
 					
-					<p class="font-semi-white margin-tb-30">{{ job.description }}</p>
+					<div class="font-semi-white margin-tb-30">
+						{% autoescape off %}
+							{{ job.description }}
+						{% endautoescape %}
+					</div>
 					
 				</div>
 				{% endfor %}
