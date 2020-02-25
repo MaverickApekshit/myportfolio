@@ -22,5 +22,5 @@ import resume.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', resume.views.home, name='home'),
-    path('blog/', include('blog.urls'))
+    path('projects/', include('projects.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
