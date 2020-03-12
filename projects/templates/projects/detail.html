@@ -49,7 +49,7 @@
 		<!-- Main Content -->
 	  	<div class="row">
 
-	  		<!-- Images -->
+	  		<!-- Image Carousel -->
 	    	<div class="col-lg-6">
 	    		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -63,7 +63,6 @@
 					      	<img src="https://colorlib.com/preview/theme/cvportfolio/images/portfolio-3-600x400.jpg" class="d-block w-100" alt="...">
 					      	<div class="carousel-caption d-none d-md-block">
 					        	<h5>First slide label</h5>
-					        	<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 					      	</div>
 					    </div>
 					    
@@ -71,14 +70,12 @@
 					      	<img src="https://colorlib.com/preview/theme/cvportfolio/images/portfolio-1-600x400.jpg" class="d-block w-100" alt="...">
 					      	<div class="carousel-caption d-none d-md-block">
 					        	<h5>Second slide label</h5>
-					        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					      	</div>
 					    </div>
 					    <div class="carousel-item">
 					      	<img src="https://colorlib.com/preview/theme/cvportfolio/images/portfolio-2-600x400.jpg" class="d-block w-100" alt="...">
 					      	<div class="carousel-caption d-none d-md-block">
 					        	<h5>Third slide label</h5>
-					        	<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 					      	</div>
 					    </div>
   					</div>
@@ -94,15 +91,24 @@
 				</div>
 	    	</div>
 
-	    	<!-- Descripotion -->
+	    	<!-- Description -->
 	    	<div class="col-lg-6">
 	    		<h3>{{ project.title }}</h3>
 				
 				<p><strong>Made Using:</strong> {{ project.tech_stack }}</p>
 				
-				<p class="details-links"><a href="#">Github <i class="fab fa-github-square"></i></a> <a href="#">Live Demo <i class="fas fa-external-link-alt"></i></a></p>
+				{% if project.github_link or project.demo_link %}
+				<p class="details-links">
+					{% if project.github_link %}
+					<a href="{{ project.github_link }}" target="_blank">Github <i class="fab fa-github-square"></i></a>
+					{% endif %}
+					{% if project.demo_link %}
+					<a href="{{ project.demo_link }}" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
+					{% endif %}
+				</p>
+				{% endif %}
 				
-				<p>E-business, repurpose; rich; deploy matrix, "front-end integrated," customized enable out-of-the-box out-of-the-box evolve, synergies cross-media strategic capture peer-to-peer revolutionize grow. Action-items platforms, implement long-tail capture remix web-enabled productize B2C leading-edge. Virtual ecologies create. Systems impactful remix long-tail, create reintermediate, "reinvent engage infrastructures initiatives." User-centred dot-com platforms holistic facilitate harness: deliverables repurpose; granular world-class compelling transition collaborative generate.</p>
+				<p>{{ project.discription }}</p>
 	    	</div>
 	    </div>
 	</div>
