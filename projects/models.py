@@ -4,7 +4,6 @@ import datetime
 class Project(models.Model):
 	"""Model for rendering project"""
 	
-	image = models.ImageField(upload_to='images/')
 	title = models.CharField(max_length=100, default="Project Name")
 	tech_stack = models.CharField(max_length=200)
 	github_link = models.URLField(max_length=500, blank=True)
@@ -17,3 +16,10 @@ class Project(models.Model):
 
 	def __str__(self):
 		return self.title
+
+class ProjectImages(models.Model):
+	"""Model for attaching project images"""
+
+	project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='images')
+	image = models.ImageField(upload_to='images/')
+	caption = models.CharField(max_length=100, default="Image 1")

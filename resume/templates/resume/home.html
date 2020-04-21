@@ -112,10 +112,10 @@
 	<div class="portfolioContainer">
 
 		<!-- Project Item -->
-		{% for project in projects.all %}
+		{% for project in projects.all %} 
 		<div class="p-item">
 			<div class="portfolio_item">
-				<img src="{{ project.image.url }}" alt="">
+				<img src="{{ project.images.all.0.image.url }}" alt="">
 
 				<div class="portfolio_text">
 					<a href="projects/{{ project.id }}">

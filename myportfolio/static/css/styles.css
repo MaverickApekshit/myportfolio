@@ -268,3 +268,5 @@ header .info .right-area{ margin-left: 45px; }
 .section{ padding: 50px 0 50px; }
 
 .project-details .details-links a{ margin-right: 20px; }
+
+#projectImages .carousel-caption { background-color: #000; opacity: 0.4; right: 0%; left: 0%; bottom: 10px; padding-bottom: 30px; }
