@@ -263,10 +263,17 @@ header .info .right-area{ margin-left: 45px; }
 
 .project-details .nav{ margin-top: 30px; }
 
-.nav-link{ padding: 0; }
+.project-details .nav-link{ padding: 0; }
 
-.section{ padding: 50px 0 50px; }
+.project-details .section{ padding: 50px 0 50px; }
+
+.project-details p { margin-top: 10px }
 
 .project-details .details-links a{ margin-right: 20px; }
 
 #projectImages .carousel-caption { background-color: #000; opacity: 0.4; right: 0%; left: 0%; bottom: 10px; padding-bottom: 30px; }
+
+
+@media only screen and (max-width: 767px) {
+	.project-details h3 { margin-top: 20px }
+}
